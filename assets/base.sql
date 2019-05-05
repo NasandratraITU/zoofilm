@@ -91,15 +91,15 @@ INSERT INTO FILM VALUES ('8','LES PROFS',1,'Scott Adkins',120,'img_3.jpg','hero_
 INSERT INTO FILM VALUES ('9','THE GAUNT',1,'Scott Adkins',120,'img_3.jpg','hero_bg_3.jpg','2015',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam perferendis deleniti vitae asperiores accusamus tempora facilis sapiente, quas! Quos asperiores alias fugiat sunt tempora molestias quo deserunt similique sequi.");
 
 insert into PROGRAMME VALUES (1,'2019-05-03',9,30,0,1,1);
-insert into PROGRAMME VALUES (2,'2019-05-04',3,30,0,2,2);
-insert into PROGRAMME VALUES (3,'2019-05-05',9,30,0,1,3);
-insert into PROGRAMME VALUES (4,'2019-05-06',3,30,0,1,4);
-insert into PROGRAMME VALUES (5,'2019-05-07',9,30,0,3,5);
-insert into PROGRAMME VALUES (6,'2019-05-08',3,30,0,3,6);
+insert into PROGRAMME VALUES (2,'2019-05-04',14,30,0,2,2);
+insert into PROGRAMME VALUES (3,'2019-05-05',18,30,0,1,3);
+insert into PROGRAMME VALUES (4,'2019-05-06',9,30,0,1,4);
+insert into PROGRAMME VALUES (5,'2019-05-07',14,30,0,3,5);
+insert into PROGRAMME VALUES (6,'2019-05-08',18,30,0,3,6);
 insert into PROGRAMME VALUES (7,'2019-05-09',9,30,0,1,7);
-insert into PROGRAMME VALUES (8,'2019-05-10',3,30,0,2,8);
-insert into PROGRAMME VALUES (9,'2019-05-11',9,30,0,1,9);
-insert into PROGRAMME VALUES (10,'2019-05-12',3,30,0,2,1);
+insert into PROGRAMME VALUES (8,'2019-05-10',14,30,0,2,8);
+insert into PROGRAMME VALUES (9,'2019-05-11',18,30,0,1,9);
+insert into PROGRAMME VALUES (10,'2019-05-12',9,30,0,2,1);
 
 insert into CONFIGRESERVATION values (1,12,20000,25000,15000);
 

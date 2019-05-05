@@ -47,16 +47,14 @@
             <div class="property-entry h-100">
               <a href="property-details.html" class="property-thumbnail">
                
-                <img src="<?php echo base_url();?>assets/images/<?php echo($film['IMAGEFILM']);?>" alt="Image" class="img-fluid">
+                <img width="800px" height="1000px" src="<?php echo base_url();?>assets/images/<?php echo($film['IMAGEFILM']);?>" alt="image_<?php echo($film['TITREFILM']);?>" class="img-fluid">
               </a>
               <div class="p-4 property-body">
                 <!-- <a href="#" class="property-favorite active"><span class="icon-heart-o"></span></a> -->
                 <h2 class="property-title"><a href="<?php echo site_url('Controle/getInfoFilm/'.$film['IDFILM']);?>"><?php echo($film['TITREFILM']);?></a></h2>
-				<strong class="property-price text-primary mb-3 d-block text-success">5000 Ar</strong>
-                <span class="property-icon icon-room"></span> Acteurs : Bruce Willis - Arnold Swageer <br>
-				<span class="property-icon icon-room"></span> Genre : action <br>
-
-
+				<strong class="property-price text-primary mb-3 d-block text-danger">25 places restantes</strong>
+                <span class="property-icon icon-room"></span> Date : 2019-05-12<br>
+                <span class="property-icon icon-room"></span> A : 15 h<br>
               </div>
             </div>
             </div>
