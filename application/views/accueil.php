@@ -1,3 +1,4 @@
+<hr>
 <div class="row">
 		<div class="container">
 					<h1 class="text-center" style="color:Blue">Decouvrez nos meilleurs selections de films</h1>
