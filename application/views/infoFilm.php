@@ -45,8 +45,8 @@
                   <strong class="d-block"><?php echo $infoprogramme[0]['heuredate'];?> : <?php echo $infoprogramme[0]['minutedate'];?></strong>
                 </div>
                 <div class="col-md-6 col-lg-4 text-center border-bottom border-top py-3">
-                  <span class="d-inline-block text-black mb-0 caption-text">Salle</span>
-                  <strong class="d-block">S<?php echo $infoprogramme[0]['idsalle'];?></strong>
+                  <span class="d-inline-block text-black mb-0 caption-text">Places restant</span>
+                  <strong class="d-block"><?php if(isset($resteplace)) {echo $resteplace;}else{echo('150');} ?></strong>
                 </div>
               </div>
               <h2 class="h4 text-black">Synopsys</h2>

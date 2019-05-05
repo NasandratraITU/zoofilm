@@ -10,8 +10,9 @@ class Controle extends CI_Controller {
 	public function index()
 	{
         $page = "accueil";
+        $titre = "Reservation film cinema";
         $listGenre = $this->mabase->getGenre();
-		$rep = array('page'=>$page,'listGenre'=>$listGenre);
+		$rep = array('page'=>$page,'listGenre'=>$listGenre,'titre'=>$titre);
         $this->load->view('index',$rep);
     }
 
@@ -20,7 +21,9 @@ class Controle extends CI_Controller {
         $page = "filmByGenre";
         $listGenre = $this->mabase->getGenre();
         $listFilm = $this->mabase->getListFilmByGenre($idgenre);
-		$rep = array('page'=>$page,'listFilm'=>$listFilm,'listGenre'=>$listGenre);
+        $genre = $this->mabase->getNomGenre($idgenre);
+        $titre = "Decouvrez nos films genre ".$genre[0]['GENRE'];
+		$rep = array('page'=>$page,'listFilm'=>$listFilm,'listGenre'=>$listGenre,'titre'=>$titre);
         $this->load->view('index',$rep);
     }
 
@@ -28,9 +31,13 @@ class Controle extends CI_Controller {
     {
         $page = "infoFilm";
         $infoprogramme = $this->mabase->getProgrammeByIdFilm($idfilm);
+        // $idreservation = $this->mabase->getIdReservation($infoprogramme[0]['IDPROGRAMME']);
+        $nbplacereste = $this->mabase->getPlaceReste($infoprogramme[0]['idprogramme']);
+        $resteplace = $nbplacereste[0]['reste'];
         $listGenre = $this->mabase->getGenre();
         $film = $this->mabase->getInfoFilm($idfilm);
-		$rep = array('page'=>$page,'film'=>$film,'listGenre'=>$listGenre,'infoprogramme'=>$infoprogramme);
+        $titre = "Reserver le film ".$film[0]['TITREFILM']." maintenant";
+		$rep = array('page'=>$page,'film'=>$film,'listGenre'=>$listGenre,'infoprogramme'=>$infoprogramme,'resteplace'=>$resteplace,'titre'=>$titre);
         $this->load->view('index',$rep);
     }
 

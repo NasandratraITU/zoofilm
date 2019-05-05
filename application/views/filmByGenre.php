@@ -1,6 +1,7 @@
+<hr>
 <div class="row">
 		<div class="container">
-					<h1 class="text-center" style="color:Blue">Decouvrez nos meilleurs selections de films</h1>
+					<h1 class="text-center" style="color:Blue"><?php echo($titre);?></h1>
 					<p>Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem </p>
 					
 		</div>
@@ -52,9 +53,9 @@
               <div class="p-4 property-body">
                 <!-- <a href="#" class="property-favorite active"><span class="icon-heart-o"></span></a> -->
                 <h2 class="property-title"><a href="<?php echo site_url('Controle/getInfoFilm/'.$film['IDFILM']);?>"><?php echo($film['TITREFILM']);?></a></h2>
-				<strong class="property-price text-primary mb-3 d-block text-danger">25 places restantes</strong>
-                <span class="property-icon icon-room"></span> Date : 2019-05-12<br>
-                <span class="property-icon icon-room"></span> A : 15 h<br>
+				<!-- <strong class="property-price text-primary mb-3 d-block text-danger">25 places restantes</strong> -->
+                <span class="property-icon icon-room"></span> Date : <?php echo($film['DATEFILM']);?><br>
+                <span class="property-icon icon-room"></span> A : <?php echo($film['HEUREDATE']);?> heures <br>
               </div>
             </div>
             </div>
