@@ -90,6 +90,37 @@ INSERT INTO FILM VALUES ('7','JOHNY ENGLISH',1,'Scott Adkins',120,'img_3.jpg','h
 INSERT INTO FILM VALUES ('8','LES PROFS',1,'Scott Adkins',120,'img_3.jpg','hero_bg_3.jpg','2015',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam perferendis deleniti vitae asperiores accusamus tempora facilis sapiente, quas! Quos asperiores alias fugiat sunt tempora molestias quo deserunt similique sequi.");
 INSERT INTO FILM VALUES ('9','THE GAUNT',1,'Scott Adkins',120,'img_3.jpg','hero_bg_3.jpg','2015',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam perferendis deleniti vitae asperiores accusamus tempora facilis sapiente, quas! Quos asperiores alias fugiat sunt tempora molestias quo deserunt similique sequi.");
 
+
+
+
+
+
+
+
+
+
+INSERT INTO FILM VALUES ('1','INDISPUTED 3',2,'Scott Adkins',120,'undisputed4.jpg','hero_bg_3.jpg','2015',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam perferendis deleniti vitae asperiores accusamus tempora facilis sapiente, quas! Quos asperiores alias fugiat sunt tempora molestias quo deserunt similique sequi.");
+INSERT INTO FILM VALUES ('2','THE RAID',2,'Scott Adkins',120,'theraid.jpg','hero_bg_3.jpg','2015',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam perferendis deleniti vitae asperiores accusamus tempora facilis sapiente, quas! Quos asperiores alias fugiat sunt tempora molestias quo deserunt similique sequi.");
+INSERT INTO FILM VALUES ('3','AQUAMAN',2,'Scott Adkins',120,'aquaman.jpg','hero_bg_3.jpg','2015',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam perferendis deleniti vitae asperiores accusamus tempora facilis sapiente, quas! Quos asperiores alias fugiat sunt tempora molestias quo deserunt similique sequi.");
+INSERT INTO FILM VALUES ('4','BLACKPANTHER',2,'Scott Adkins',120,'blackpanther.jpg','hero_bg_3.jpg','2015',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam perferendis deleniti vitae asperiores accusamus tempora facilis sapiente, quas! Quos asperiores alias fugiat sunt tempora molestias quo deserunt similique sequi.");
+INSERT INTO FILM VALUES ('5','IPMAN 4',2,'Scott Adkins',120,'ipman4.jpg','hero_bg_3.jpg','2015',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam perferendis deleniti vitae asperiores accusamus tempora facilis sapiente, quas! Quos asperiores alias fugiat sunt tempora molestias quo deserunt similique sequi.");
+INSERT INTO FILM VALUES ('6','TRANSPORTER 3',2,'Scott Adkins',120,'transporter3.jpg','hero_bg_3.jpg','2015',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam perferendis deleniti vitae asperiores accusamus tempora facilis sapiente, quas! Quos asperiores alias fugiat sunt tempora molestias quo deserunt similique sequi.");
+
+
+INSERT INTO FILM VALUES ('7','LA LA LAND',3,'Scott Adkins',120,'lalaland.jpg','hero_bg_3.jpg','2015',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam perferendis deleniti vitae asperiores accusamus tempora facilis sapiente, quas! Quos asperiores alias fugiat sunt tempora molestias quo deserunt similique sequi.");
+INSERT INTO FILM VALUES ('8','CRAZY ASIAN',3,'Scott Adkins',120,'crazyasian.jpg','hero_bg_3.jpg','2015',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam perferendis deleniti vitae asperiores accusamus tempora facilis sapiente, quas! Quos asperiores alias fugiat sunt tempora molestias quo deserunt similique sequi.");
+INSERT INTO FILM VALUES ('9','TITANIC',3,'Scott Adkins',120,'titanic.jpg','hero_bg_3.jpg','2015',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam perferendis deleniti vitae asperiores accusamus tempora facilis sapiente, quas! Quos asperiores alias fugiat sunt tempora molestias quo deserunt similique sequi.");
+INSERT INTO FILM VALUES ('10','SECONDE CHANCE',3,'Scott Adkins',120,'secondchance.jpg','hero_bg_3.jpg','2015',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam perferendis deleniti vitae asperiores accusamus tempora facilis sapiente, quas! Quos asperiores alias fugiat sunt tempora molestias quo deserunt similique sequi.");
+INSERT INTO FILM VALUES ('11','LE PRINCE ET MOI',3,'Scott Adkins',120,'princeetmoi.jpg','hero_bg_3.jpg','2015',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam perferendis deleniti vitae asperiores accusamus tempora facilis sapiente, quas! Quos asperiores alias fugiat sunt tempora molestias quo deserunt similique sequi.");
+INSERT INTO FILM VALUES ('12',"LOVE THING",3,'Scott Adkins',120,'lovedontcoast.jpg','hero_bg_3.jpg','2015',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam perferendis deleniti vitae asperiores accusamus tempora facilis sapiente, quas! Quos asperiores alias fugiat sunt tempora molestias quo deserunt similique sequi.");
+
+INSERT INTO FILM VALUES ('13','JOHNY ENGLISH',1,'Scott Adkins',120,'johnyenglish.jpg','hero_bg_3.jpg','2015',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam perferendis deleniti vitae asperiores accusamus tempora facilis sapiente, quas! Quos asperiores alias fugiat sunt tempora molestias quo deserunt similique sequi.");
+INSERT INTO FILM VALUES ('14','LES PROFS',1,'Scott Adkins',120,'lesprofs2.jpg','hero_bg_3.jpg','2015',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam perferendis deleniti vitae asperiores accusamus tempora facilis sapiente, quas! Quos asperiores alias fugiat sunt tempora molestias quo deserunt similique sequi.");
+INSERT INTO FILM VALUES ('15','ACE VENTURA',1,'Scott Adkins',120,'aceventura.jpg','hero_bg_3.jpg','2015',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam perferendis deleniti vitae asperiores accusamus tempora facilis sapiente, quas! Quos asperiores alias fugiat sunt tempora molestias quo deserunt similique sequi.");
+INSERT INTO FILM VALUES ('16','THE MASK',1,'Scott Adkins',120,'themask.jpg','hero_bg_3.jpg','2015',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam perferendis deleniti vitae asperiores accusamus tempora facilis sapiente, quas! Quos asperiores alias fugiat sunt tempora molestias quo deserunt similique sequi.");
+INSERT INTO FILM VALUES ('17','THE OUTCASTS',1,'Scott Adkins',120,'theoutcast.jpg','hero_bg_3.jpg','2015',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam perferendis deleniti vitae asperiores accusamus tempora facilis sapiente, quas! Quos asperiores alias fugiat sunt tempora molestias quo deserunt similique sequi.");
+INSERT INTO FILM VALUES ('18','ALADIN',1,'Scott Adkins',120,'aladin.jpg','hero_bg_3.jpg','2015',"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aperiam perferendis deleniti vitae asperiores accusamus tempora facilis sapiente, quas! Quos asperiores alias fugiat sunt tempora molestias quo deserunt similique sequi.");
+
 insert into PROGRAMME VALUES (1,'2019-05-03',9,30,0,1,1);
 insert into PROGRAMME VALUES (2,'2019-05-04',14,30,0,2,2);
 insert into PROGRAMME VALUES (3,'2019-05-05',18,30,0,1,3);
