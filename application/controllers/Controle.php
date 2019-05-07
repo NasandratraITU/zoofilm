@@ -71,7 +71,7 @@ class Controle extends CI_Controller {
     //FONCTION BACK OFFICE
     public function indexbo()
 	{
-        if($this->session->userdata('pseudo')==null)  redirect('Controle/loginbo');
+        if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
 		$this->load->view('boindex');
     }
     
@@ -82,7 +82,7 @@ class Controle extends CI_Controller {
 
 	public function addMoovie()
 	{
-        if($this->session->userdata('pseudo')==null)  redirect('Controle/loginbo');
+        if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
 		$page="boajoutFilm";
 		$idmax = $this->mabase->getIdMaxFilm();
 		$listgenre = $this->mabase->getGenreFilm();
@@ -95,7 +95,7 @@ class Controle extends CI_Controller {
 
 	public function manageMoovie()
 	{
-        if($this->session->userdata('pseudo')==null)  redirect('Controle/loginbo');
+        if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
 		$page="bometier";
 		$listMetier = $this->mabase->getListMetier();
 		$rep = array('page'=>$page,'listMetier'=>$listMetier);
@@ -105,7 +105,7 @@ class Controle extends CI_Controller {
 	public function ajouterFilm()
 	{
         
-        if($this->session->userdata('pseudo')==null)  redirect('Controle/loginbo');
+        if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
 		$titre=$this->input->post('titre');
 		$idgenre=$this->input->post('idgenre');
 		$acteur=$this->input->post('acteur');
@@ -147,7 +147,7 @@ class Controle extends CI_Controller {
 
 	public function pageAjoutImage()
 	{
-        if($this->session->userdata('pseudo')==null)  redirect('Controle/loginbo');
+        if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
         $idfilm = $this->input->get('idfilm');
 		$page="bopageAjoutImage";
 		// $listMetier = $this->mabase->getListMetier();
@@ -157,7 +157,7 @@ class Controle extends CI_Controller {
 
 	public function test()
 	{
-		if($this->session->userdata('pseudo')==null)  redirect('Controle/loginbo');
+		if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
 		$config['upload_path']='./uploads';
 		$config['allowed_types']='jpg|png|jpeg';
 		$config['max_width']='5000';
@@ -179,7 +179,7 @@ class Controle extends CI_Controller {
 
 	public function upload1($idmax)
 	{
-        if($this->session->userdata('pseudo')==null)  redirect('Controle/loginbo');
+        if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
         
 		$config['upload_path']='./uploads';
 		$config['allowed_types']='jpg|png|jpeg';
@@ -227,7 +227,7 @@ class Controle extends CI_Controller {
 
 	public function gestionfilm()
 	{
-        if($this->session->userdata('pseudo')==null)  redirect('Controle/loginbo');
+        if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
 		$page = "bogestionfilm";
 		$listfilm = $this->mabase->getListeFilm();
 		$rep = array('page'=>$page,'listfilm'=>$listfilm);
@@ -236,7 +236,7 @@ class Controle extends CI_Controller {
 
 	public function modifierfilm($idfilm)
 	{
-        if($this->session->userdata('pseudo')==null)  redirect('Controle/loginbo');
+        if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
 		$page = "bomodificationfilm";
 		$film = $this->mabase->getFilmById($idfilm);
 		$rep = array('page'=>$page,'film'=>$film);
@@ -245,7 +245,7 @@ class Controle extends CI_Controller {
 
 	public function updateFilm($idfilm)
 	{
-        if($this->session->userdata('pseudo')==null)  redirect('Controle/loginbo');
+        if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
 		$titre=$this->input->get('titre');
 		$acteur=$this->input->get('acteur');
 		$duree=$this->input->get('duree');
