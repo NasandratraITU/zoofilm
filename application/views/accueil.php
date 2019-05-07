@@ -1,126 +1,55 @@
-<hr>
-<div class="row">
-		<div class="container">
-					<h1 class="text-center" style="color:Blue">Decouvrez nos meilleurs selections de films</h1>
-					<p>Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem </p>
-					
-		</div>
-	</div>
-    <div class="site-section site-section-sm bg-light">
-      <div class="container">heroku local web
-      
-        <div class="row mb-5">
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="property-entry h-100">
-              <a href="property-details.html" class="property-thumbnail">
-                <img src="<?php echo base_url();?>assets/images/img_1.jpg" alt="Image" class="img-fluid">
-              </a>
-              <div class="p-4 property-body">
-                <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>
-                <h2 class="property-title"><a href="property-details.html">Indisputed 4</a></h2>
-                <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> 625 S. Berendo St Unit 607 Los Angeles, CA 90005</span>
-                <strong class="property-price text-primary mb-3 d-block text-success">$2,265,500</strong>
-                <ul class="property-specs-wrap mb-3 mb-lg-0">
-                  <li>
-                    <span class="property-specs">Beds</span>
-                    <span class="property-specs-number">2 <sup>+</sup></span>
-                    
-                  </li>
-                  <li>
-                    <span class="property-specs">Baths</span>
-                    <span class="property-specs-number">2</span>
-                    
-                  </li>
-                  <li>
-                    <span class="property-specs">SQ FT</span>
-                    <span class="property-specs-number">7,000</span>
-                    
-                  </li>
-                </ul>
+<br/>
 
-              </div>
-            </div>
+
+  <div class="site-section">
+    <div class="container">
+      <div class="row mb-5 justify-content-center">
+        <div class="col-md-7">
+          <div class="site-section-title text-center">
+            <h2>Nos meilleurs catégories</h2>
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero magnam officiis ipsa eum pariatur labore fugit amet eaque iure vitae, repellendus laborum in modi reiciendis quis! Optio minima quibusdam, laboriosam.</p> -->
+            <p>"Vous aimez plutôt le romantisme ou l'action ? La comédie ou le drame ? Tous se trouvent chez nous, n'hesitez pas à reserver vos places et rendez vous dans nos salles de projections !"</p>
           </div>
-			
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="property-entry h-100">
-              <a href="property-details.html" class="property-thumbnail">
-               
-                <img src="<?php echo base_url();?>assets/images/img_2.jpg" alt="Image" class="img-fluid">
-              </a>
-              <div class="p-4 property-body">
-                <!-- <a href="#" class="property-favorite active"><span class="icon-heart-o"></span></a> -->
-                <h2 class="property-title"><a href="property-details.html">L'ARME FATALE</a></h2>
-				<strong class="property-price text-primary mb-3 d-block text-success">5000 Ar</strong>
-                <span class="property-icon icon-room"></span> Acteurs : Bruce Willis - Arnold Swageer <br>
-				<span class="property-icon icon-room"></span> Genre : action <br>
-
-
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-4 mb-4">
-            <div class="property-entry h-100">
-              <a href="property-details.html" class="property-thumbnail">
-                <div class="offer-type-wrap">
-                  <span class="offer-type bg-info">Lease</span>
-                </div>
-                <img src="<?php echo base_url();?>assets/images/img_3.jpg" alt="Image" class="img-fluid">
-              </a>
-              <div class="p-4 property-body">
-                <a href="#" class="property-favorite"><span class="icon-heart-o"></span></a>
-                <h2 class="property-title"><a href="property-details.html">853 S Lucerne Blvd</a></h2>
-                <span class="property-location d-block mb-3"><span class="property-icon icon-room"></span> 853 S Lucerne Blvd Unit 101 Los Angeles, CA 90005</span>
-                <strong class="property-price text-primary mb-3 d-block text-success">$2,265,500</strong>
-                <ul class="property-specs-wrap mb-3 mb-lg-0">
-                  <li>
-                    <span class="property-specs">Beds</span>
-                    <span class="property-specs-number">2 <sup>+</sup></span>
-                    
-                  </li>
-                  <li>
-                    <span class="property-specs">Baths</span>
-                    <span class="property-specs-number">2</span>
-                    
-                  </li>
-                  <li>
-                    <span class="property-specs">SQ FT</span>
-                    <span class="property-specs-number">5,500</span>
-                    
-                  </li>
-                </ul>
-
-              </div>
-            </div>
-          </div>
-
         </div>
-        <div class="row">
-          <div class="col-md-12 text-center">
-            <div class="site-pagination">
-              <a href="#" class="active">1</a>
-              <a href="#">2</a>
-              <a href="#">3</a>
-              <a href="#">4</a>
-              <a href="#">5</a>
-              <span>...</span>
-              <a href="#">10</a>
-            </div>
-          </div>  
+      </div>
+      <div class="row">
+      <?php foreach($listGenre as $genre)
+{ ?>
+
+      <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
+      <div class="team-member">
+
+        <img src="<?php echo base_url();?>assets/images/<?php echo ($genre['IMAGEPRINCIPALE']);?>" alt="image_genre_<?php echo($genre['GENRE']);?>" class="img-fluid rounded mb-4">
+
+        <div class="text">
+          <h2 class="mb-2 font-weight-light text-black h4"><?php echo($genre['GENRE']);?></h2>
+          <!-- <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span> -->
+          <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cumque vitae voluptates culpa earum similique corrupti itaque veniam doloribus amet perspiciatis recusandae sequi nihil tenetur ad, modi quos id magni!</p> -->
+          <p><?php echo($genre['DESCRIPTIONGENRE']);?></p>
         </div>
-        
       </div>
     </div>
 
+<?php } ;?>
+
+         
+
+          
+        </div>
+    </div>
+    </div>
+
+
+    
     <div class="site-section">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-md-7 text-center">
             <div class="site-section-title">
-              <h2>Why Choose Us?</h2>
+              <h2>Pourquoi nous choisir ?</h2>
             </div>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis maiores quisquam saepe architecto error corporis aliquam. Cum ipsam a consectetur aut sunt sint animi, pariatur corporis, eaque, deleniti cupiditate officia.</p>
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis maiores quisquam saepe architecto error corporis aliquam. Cum ipsam a consectetur aut sunt sint animi, pariatur corporis, eaque, deleniti cupiditate officia.</p> -->
+            <p>Actif depuis plus de 10 ans dans la reservation de cinema à Madagascar, nous sommes certainement le meilleur référence dans le domaine cinématographique dans toute la grande île. Ne perdez pas de temps ! Reservation facile et rapide !</p>
           </div>
         </div>
 
@@ -128,25 +57,28 @@
           <div class="col-md-6 col-lg-4">
             <a href="#" class="service text-center">
               <span class="icon flaticon-house"></span>
-              <h2 class="service-heading">Research Subburbs</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt iure qui natus perspiciatis ex odio molestia.</p>
-              <p><span class="read-more">Read More</span></p>
+              <h2 class="service-heading">Plusieurs batiments</h2>
+              <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt iure qui natus perspiciatis ex odio molestia.</p> -->
+              <p>Plus de 5 studios dans la capitale, et encore plusieurs dans les provinces, nous sommes déja un grand réseau de projection cinematographique.</p>
+              <!-- <p><span class="read-more">Read More</span></p> -->
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
             <a href="#" class="service text-center">
               <span class="icon flaticon-sold"></span>
-              <h2 class="service-heading">Sold Houses</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt iure qui natus perspiciatis ex odio molestia.</p>
-              <p><span class="read-more">Read More</span></p>
+              <h2 class="service-heading">Vente de film</h2>
+              <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt iure qui natus perspiciatis ex odio molestia.</p> -->
+              <p>A part la reservation, nous sommes les premiers distributeurs de nouveauté en matière de <strong>film</strong> dans l'île</p>
+              <!-- <p><span class="read-more">Read More</span></p> -->
             </a>
           </div>
           <div class="col-md-6 col-lg-4">
             <a href="#" class="service text-center">
               <span class="icon flaticon-camera"></span>
-              <h2 class="service-heading">Security Priority</h2>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt iure qui natus perspiciatis ex odio molestia.</p>
-              <p><span class="read-more">Read More</span></p>
+              <h2 class="service-heading">Securité et droit d'auteur</h2>
+              <!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt iure qui natus perspiciatis ex odio molestia.</p> -->
+              <p>Nous nous engageons fermement de l'attestation de sécurité dans nos salles de projection et salles de ventes.</p>
+              <!-- <p><span class="read-more">Read More</span></p> -->
             </a>
           </div>
         </div>

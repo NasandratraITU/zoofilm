@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Zooland &mdash; <?php echo($titre);?></title>
+    <title>Zoolfilm &mdash; <?php echo($titre);?></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -58,14 +58,12 @@
                   <li class="has-children">
                     <a href="properties.html">Genre</a>
                     <ul class="dropdown arrow-top">
-                    <?php foreach($listGenre as $genre)
-                    {?>
-                        <li><a href="<?php echo base_url('cinema/genre-'.$genre['IDGENRE'].'.html');?>"><?php echo($genre['GENRE']);?></a></li>
-                   <?php }
-                    ?>
-                      </ul>
-                  <li><a href="tarifs.html">Nos tarifs</a></li>
-                  <li><a href="contact.html">Contact</a></li>
+                            <?php foreach($listGenre as $genre)
+                                {?>
+                                <li><a href="<?php echo base_url('cinema/genre-'.$genre['IDGENRE'].'.html');?>"><?php echo($genre['GENRE']);?></a></li>
+                          <?php } ?>
+                    </ul>
+                
                 </ul>
               </nav>
             </div>
@@ -80,8 +78,8 @@
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-10">
-              <span class="d-inline-block bg-success text-white px-3 mb-3 property-offer-type rounded">For Rent</span>
-              <h1 class="mb-2">Zoofilm - Reservez, voir </h1>
+              <!-- <span class="d-inline-block bg-success text-white px-3 mb-3 property-offer-type rounded">For Rent</span> -->
+              <h1 class="mb-2">Zoofilm - Reservez, decouvrez </h1>
               <!-- <p class="mb-5"><strong class="h2 text-success font-weight-bold">$2,250,500</strong></p> -->
               <!-- <p><a href="#" class="btn btn-white btn-outline-white py-3 px-5 rounded-0 btn-2">See Details</a></p> -->
             </div>
@@ -93,10 +91,10 @@
         <div class="container">
           <div class="row align-items-center justify-content-center text-center">
             <div class="col-md-10">
-              <span class="d-inline-block bg-danger text-white px-3 mb-3 property-offer-type rounded">For Sale</span>
-              <h1 class="mb-2">625 S. Berendo St</h1>
-              <p class="mb-5"><strong class="h2 text-success font-weight-bold">$1,000,500</strong></p>
-              <p><a href="#" class="btn btn-white btn-outline-white py-3 px-5 rounded-0 btn-2">See Details</a></p>
+              <!-- <span class="d-inline-block bg-danger text-white px-3 mb-3 property-offer-type rounded">For Sale</span> -->
+              <h1 class="mb-2">Zoofilm - Films en tous genre</h1>
+              <!-- <p class="mb-5"><strong class="h2 text-success font-weight-bold">$1,000,500</strong></p> -->
+              <!-- <p><a href="#" class="btn btn-white btn-outline-white py-3 px-5 rounded-0 btn-2">See Details</a></p> -->
             </div>
           </div>
         </div>
@@ -105,7 +103,7 @@
     </div>
 
 
-    <div class="site-section site-section-sm pb-0">
+    <!-- <div class="site-section site-section-sm pb-0">
       <div class="container">
         <div class="row">
           <form class="form-search col-md-12" style="margin-top: -100px;">
@@ -121,7 +119,7 @@
                   </select>
                 </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-3 col-md-offset-2">
                 <label for="offer-types">Offer Type</label>
                 <div class="select-wrap">
                   <span class="icon icon-arrow_drop_down"></span>
@@ -150,7 +148,7 @@
               </div>
             </div>
           </form>
-        </div>  
+        </div>   -->
 
         <!-- <div class="row">
           <div class="col-md-12">
@@ -200,32 +198,29 @@
         <div class="row">
           <div class="col-lg-4">
             <div class="mb-5">
-              <h3 class="footer-heading mb-4">About Homeland</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe pariatur reprehenderit vero atque, consequatur id ratione, et non dignissimos culpa? Ut veritatis, quos illum totam quis blanditiis, minima minus odio!</p>
+              <h3 class="footer-heading mb-4">A propos de Zoofilm</h3>
+              <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe pariatur reprehenderit vero atque, consequatur id ratione, et non dignissimos culpa? Ut veritatis, quos illum totam quis blanditiis, minima minus odio!</p> -->
+              <p>Compagnie implantée à Madagascar depuis 2009, Zoofilm est une agence cinématographique travaillant avec plusieurs maison de diffusion cinématique. Elle est une référence renommée dans la réservation de film en ligne.</p>
             </div>
 
             
             
           </div>
-          <div class="col-lg-4 mb-5 mb-lg-0">
+          <div class="col-lg-4 mb-5 mb-lg-0 col-md-offset-2">
             <div class="row mb-5">
-              <div class="col-md-12">
+              <div class="col-md-12 col-md-offset-1">
                 <h3 class="footer-heading mb-4">Navigations</h3>
               </div>
-              <div class="col-md-6 col-lg-6">
+              <div class="col-md-6 col-lg-6 col-md-offset-5">
                 <ul class="list-unstyled">
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">Buy</a></li>
-                  <li><a href="#">Rent</a></li>
-                  <li><a href="#">Properties</a></li>
-                </ul>
-              </div>
-              <div class="col-md-6 col-lg-6">
-                <ul class="list-unstyled">
-                  <li><a href="#">About Us</a></li>
-                  <li><a href="#">Privacy Policy</a></li>
-                  <li><a href="#">Contact Us</a></li>
-                  <li><a href="#">Terms</a></li>
+                  <li><a href="#">Accueil</a></li>
+
+
+                  <li><a href="#">Comedie</a></li>
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Romantique</a></li>
+
+
                 </ul>
               </div>
             </div>
@@ -234,27 +229,25 @@
           </div>
 
           <div class="col-lg-4 mb-5 mb-lg-0">
-            <h3 class="footer-heading mb-4">Follow Us</h3>
-
+            <h3 class="footer-heading mb-4">Nous suivre</h3>
                 <div>
-                  <a href="#" class="pl-0 pr-3"><span class="icon-facebook"></span></a>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>
+                  <a href="#" class="pl-0 pr-3"><span class="icon-facebook">F</span></a>
+                  <a href="#" class="pl-3 pr-3"><span class="icon-twitter">T</span></a>
+                  <a href="#" class="pl-3 pr-3"><span class="icon-instagram">I</span></a>
+                  <a href="#" class="pl-3 pr-3"><span class="icon-linkedin">L</span></a>
                 </div>
-
-            
-
           </div>
           
         </div>
         <div class="row pt-5 mt-5 text-center">
           <div class="col-md-12">
             <p>
+            
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Copyright &copy;<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a> -->
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
+            <p>Copright@2019 By RAKOTONANAHARY Rakotomamonjy Nasandratra ; Promo 10A ; numéro 25</p>
           </div>
           
         </div>
