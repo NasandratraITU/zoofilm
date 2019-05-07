@@ -10,7 +10,7 @@
 		
 			public function getGenre()
 			{
-				$sql = "select * from GENREFILM";
+				$sql = "select * from genrefilm";
 				$result = $this->db->query($sql);
 				$retour = $result->result_array();
 				$this->db->close();
@@ -19,7 +19,7 @@
 
             public function getListFilmByGenre($idgenre)
             {
-                $sql = "select * from FILM f join PROGRAMME p on f.IDFILM=p.IDFILM where IDGENRE='".$idgenre."'";
+                $sql = "select * from film f join programme p on f.idfilm=p.idfilm where idgenre='".$idgenre."'";
 				$result = $this->db->query($sql);
 				$retour = $result->result_array();
 				$this->db->close();
@@ -28,7 +28,7 @@
 
             public function getInfoFilm($idfilm)
             {
-                $sql = "select * from FILM where IDFILM='".$idfilm."'";
+                $sql = "select * from film where idfilm='".$idfilm."'";
                 $result = $this->db->query($sql);
 				$retour = $result->result_array();
 				$this->db->close();
@@ -46,14 +46,14 @@
 
             public function reserver($nom,$prenom,$enfant,$adulte,$telephone,$idprogramme)
             {
-                $sql = "insert into reservation(NOMCLIENT,PRENOMCLIENT,TELEPHONE,NOMBREENFANT,NOMBREADULTE,IDPROGRAMME) values ('".$nom."','".$prenom."','".$telephone."',".$enfant.",".$adulte.",".$idprogramme.")";
+                $sql = "insert into reservation(nomclient,prenomclient,telephone,nombreenfant,nombreadulte,idprogramme) values ('".$nom."','".$prenom."','".$telephone."',".$enfant.",".$adulte.",".$idprogramme.")";
                 $result = $this->db->query($sql);
                 $this->db->close();
             }
 
             public function getListePersonneReservation($idprogramme)
             {
-                $sql = "select NOMCLIENT,PRENOMCLIENT,TELEPHONE,NOMBREENFANT,NOMBREADULTE from reservation  where IDPROGRAMME='".$idprogramme."'";
+                $sql = "select nomclient,prenomclient,telephone,nombreenfant,nombreadulte from reservation  where idprogramme='".$idprogramme."'";
                 $result = $this->db->query($sql);
 				$retour = $result->result_array();
 				$this->db->close();
@@ -62,7 +62,7 @@
 
             public function getIdReservation($idfilm)
             {
-                $sql = "select  IDRESERVATION from RESERVATION where IDFILM=".$idfilm."";
+                $sql = "select  idreservation from reservation where idfilm=".$idfilm."";
                 $result = $this->db->query($sql);
 				$retour = $result->result_array();
 				$this->db->close();
@@ -80,7 +80,7 @@
             
             public function getNomGenre($idgenre)
             {
-                $sql= "select GENRE from GENREFILM where IDGENRE=".$idgenre."";
+                $sql= "select genre from genrefilm where idgenre=".$idgenre."";
                 $result = $this->db->query($sql);
 				$retour = $result->result_array();
 				$this->db->close();
