@@ -23,7 +23,7 @@ class Controle extends CI_Controller {
         $listGenre = $this->mabase->getGenre();
         $listFilm = $this->mabase->getListFilmByGenre($idgenre);
         $genre = $this->mabase->getNomGenre($idgenre);
-        $titre = "Decouvrez nos films genre ".$genre[0]['GENRE'];
+        $titre = "Decouvrez nos films genre ".$genre[0]['genre'];
 		$rep = array('page'=>$page,'listFilm'=>$listFilm,'listGenre'=>$listGenre,'titre'=>$titre);
         $this->load->view('index',$rep);
     }
@@ -38,7 +38,7 @@ class Controle extends CI_Controller {
         $resteplace = $nbplacereste[0]['reste'];
         $listGenre = $this->mabase->getGenre();
         $film = $this->mabase->getInfoFilm($idfilm);
-        $titre = "Reserver le film ".$film[0]['TITREFILM']." maintenant";
+        $titre = "Reserver le film ".$film[0]['titrefilm']." maintenant";
 		$rep = array('page'=>$page,'film'=>$film,'listGenre'=>$listGenre,'infoprogramme'=>$infoprogramme,'resteplace'=>$resteplace,'titre'=>$titre);
         $this->load->view('index',$rep);
     }
