@@ -123,7 +123,7 @@
 
 			public function getIdMaxFilm()
 			{
-				$sql = "select max(IDFILM) as idmax from FILM";
+				$sql = "select max(IDFILM) as idmax from film";
 				$result = $this->db->query($sql);
 				$retour = $result->result_array();
 				$this->db->close();
@@ -132,7 +132,7 @@
 
 			public function getGenreFilm()
 			{
-				$sql = "select * from GENREFILM";
+				$sql = "select * from genrefilm";
 				$result = $this->db->query($sql);
 				$retour = $result->result_array();
 				$this->db->close();
@@ -141,7 +141,7 @@
 
 			public function getSalle()
 			{
-				$sql = "select * from SALLE";
+				$sql = "select * from salle";
 				$result = $this->db->query($sql);
 				$retour = $result->result_array();
 				$this->db->close();
@@ -150,14 +150,14 @@
 
 			public function insertFilm($titre,$idgenre,$acteur,$duree,$sortie,$description)
 			{
-				$sql = "insert into FILM(TITREFILM,IDGENRE,ACTEUR,DUREE,IMAGEFILM,IMAGEFILM2,DATESORTIE,DESCRIPTIONFILM) values ('".$titre."',".$idgenre.",'".$acteur."',".$duree.",'image1','image2','".$sortie."',\"".$description."\")";
+				$sql = "insert into film(TITREFILM,IDGENRE,ACTEUR,DUREE,IMAGEFILM,IMAGEFILM2,DATESORTIE,DESCRIPTIONFILM) values ('".$titre."',".$idgenre.",'".$acteur."',".$duree.",'image1','image2','".$sortie."',\"".$description."\")";
 				$result = $this->db->query($sql);
 				$this->db->close();
 			}
 
 			public function insertProgramme($date,$idfilm,$heure,$idsalle)
 			{
-				$sql = "insert into PROGRAMME(DATEFILM,HEUREDATE,MINUTEDATE,ESTFINI,IDSALLE,IDFILM) values ('".$date."',".$heure.",0,0,".$idsalle.",".$idfilm.")";
+				$sql = "insert into programme(DATEFILM,HEUREDATE,MINUTEDATE,ESTFINI,IDSALLE,IDFILM) values ('".$date."',".$heure.",0,0,".$idsalle.",".$idfilm.")";
 				$result = $this->db->query($sql);
 				$this->db->close();
 			}
@@ -171,7 +171,7 @@
 			
 			public function getListeFilm()
 			{
-				$sql = "select IDFILM,TITREFILM,GENRE,ACTEUR,DUREE from FILM f join GENREFILM g on f.IDGENRE=g.IDGENRE";
+				$sql = "select IDFILM,TITREFILM,GENRE,ACTEUR,DUREE from FILM f join genrefilm g on f.IDGENRE=g.IDGENRE";
 				$result = $this->db->query($sql);
 				$retour = $result->result_array();
 				$this->db->close();
@@ -180,7 +180,7 @@
 
 			public function getFilmById($idfilm)
 			{
-				$sql = "select IDFILM,TITREFILM,GENRE,ACTEUR,DUREE,DATESORTIE,DESCRIPTIONFILM from FILM f join GENREFILM g on f.IDGENRE=g.IDGENRE where f.IDFILM=".$idfilm."";
+				$sql = "select IDFILM,TITREFILM,GENRE,ACTEUR,DUREE,DATESORTIE,DESCRIPTIONFILM from FILM f join genrefilm g on f.IDGENRE=g.IDGENRE where f.IDFILM=".$idfilm."";
 				$result = $this->db->query($sql);
 				$retour = $result->result_array();
 				$this->db->close();
@@ -189,7 +189,7 @@
 			
 			public function updateFilm($idfilm,$titre,$acteur,$duree,$sortie,$description)
 			{
-				$sql = "update film set TITREFILM='".$titre."',ACTEUR='".$acteur."',DUREE=".$duree.",DATESORTIE=".$sortie.",DESCRIPTIONFILM=\"".$description."\" where IDFILM=".$idfilm."";
+				$sql = "update film set titrefilm='".$titre."',ACTEUR='".$acteur."',DUREE=".$duree.",DATESORTIE=".$sortie.",DESCRIPTIONFILM=\"".$description."\" where IDFILM=".$idfilm."";
 				$result = $this->db->query($sql);
 				$this->db->close();
             }
