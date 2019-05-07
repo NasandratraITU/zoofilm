@@ -53,14 +53,14 @@
 
                 <ul class="site-menu js-clone-nav d-none d-lg-block">
                   <li class="active">
-                    <a href="<?php echo site_url('Controle/index');?>">Accueil</a>
+                    <a href="<?php echo base_url('cinema/accueil.html');?>">Accueil</a>
                   </li>
                   <li class="has-children">
                     <a href="properties.html">Genre</a>
                     <ul class="dropdown arrow-top">
                     <?php foreach($listGenre as $genre)
                     {?>
-                        <li><a href="<?php echo site_url('Controle/getListFilmBygenre/'.$genre['IDGENRE']);?>"><?php echo($genre['GENRE']);?></a></li>
+                        <li><a href="<?php echo base_url('cinema/genre-'.$genre['IDGENRE'].'.html');?>"><?php echo($genre['GENRE']);?></a></li>
                    <?php }
                     ?>
                       </ul>

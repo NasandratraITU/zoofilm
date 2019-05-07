@@ -1,3 +1,4 @@
+<hr>
 <div class="container">
         <div class="row">
           <div class="col-lg-8">
@@ -107,8 +108,11 @@
             <div class="bg-white widget border rounded">
 
               <h3 class="h4 text-black widget-title mb-3">Reservation</h3>
-              <form action="<?php echo site_url('Controle/reserver/'.$infoprogramme[0]['idprogramme'].'/'.$film[0]['IDFILM']);?>" class="form-contact-agent" method="get">
-                <div class="form-group">
+              <form action="<?php echo base_url('cinema/reservation.html');?>" class="form-contact-agent" method="post">
+           
+              <input type="hidden" value="<?php echo $infoprogramme[0]['idprogramme'] ;?>" id="name" name="idprogramme" class="form-control">
+              <input type="hidden" value= "<?php echo $film[0]['IDFILM'] ;?>" id="name" name="idfilm" class="form-control">
+              <div class="form-group">
                   <label for="name">Nom</label>
                   <input type="text" id="name" name="nom" class="form-control">
                 </div>
@@ -139,7 +143,8 @@
             <div class="bg-white widget border rounded">
               <h3 class="h4 text-black widget-title mb-3 text-center">CHIFFRE</h3>
               <p class="text-center">25 personnes vont voir ce film</p>
-              <p class="text-center"><a href="<?php echo site_url('Controle/getListePersonneReservation/'.$infoprogramme[0]['idprogramme']);?>">Tous les consulter</a>
+              <p class="text-center"><a href="<?php echo base_url('cinema/listepersonne-'.$infoprogramme[0]['idprogramme'].'.html');?>">Tous les consulter</a>
+      
             </div>
 
           </div>

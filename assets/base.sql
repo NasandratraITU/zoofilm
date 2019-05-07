@@ -70,6 +70,17 @@ create table RESERVATION
 
 
 
+CREATE table administrateur(
+   idadministrateur int AUTO_INCREMENT,
+   loginadmin  varchar(20),
+   passwordadmin  varchar(40),
+   primary key(idadministrateur)
+);
+
+insert into administrateur values ('1','root','dc76e9f0c0006e8f919e0c515c66dbba3982f785');
+
+
+
 insert into SALLE values(1,'S1',35);
 insert into SALLE values(2,'S2',40);
 insert into SALLE values(3,'S3',50);
@@ -130,8 +141,20 @@ insert into PROGRAMME VALUES (6,'2019-05-08',18,30,0,3,6);
 insert into PROGRAMME VALUES (7,'2019-05-09',9,30,0,1,7);
 insert into PROGRAMME VALUES (8,'2019-05-10',14,30,0,2,8);
 insert into PROGRAMME VALUES (9,'2019-05-11',18,30,0,1,9);
-insert into PROGRAMME VALUES (10,'2019-05-12',9,30,0,2,1);
+insert into PROGRAMME VALUES (10,'2019-05-12',9,30,0,2,10);
+
+insert into PROGRAMME VALUES (11,'2019-05-13',9,30,0,1,11);
+insert into PROGRAMME VALUES (12,'2019-05-14',14,30,0,2,12);
+insert into PROGRAMME VALUES (13,'2019-05-15',18,30,0,1,13);
+insert into PROGRAMME VALUES (14,'2019-05-16',9,30,0,1,14);
+insert into PROGRAMME VALUES (15,'2019-05-17',14,30,0,3,15);
+insert into PROGRAMME VALUES (16,'2019-05-18',18,30,0,3,16);
+insert into PROGRAMME VALUES (17,'2019-05-19',9,30,0,1,17);
+insert into PROGRAMME VALUES (18,'2019-05-20',14,30,0,2,18);
+
 
 insert into CONFIGRESERVATION values (1,12,20000,25000,15000);
+
+
 
 

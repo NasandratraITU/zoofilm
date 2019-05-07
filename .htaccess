@@ -1,4 +1,25 @@
+#RewriteEngine On
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^(.*)$ index.php/$1 [L]
+
+# Start URL Rewriting
+#Options +FollowSymLinks
 RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php/$1 [L]
+
+# Static url redirections
+RewriteRule ^cinema/accueil.html$ index.php?c=Controle&m=index [L]
+RewriteRule ^cinema/genre-([0-9]+).html$ index.php?c=Controle&m=getListFilmBygenre&idcategorie=$1 [L]
+RewriteRule ^cinema/numerofilm-([0-9]+).html$ index.php?c=Controle&m=getInfoFilm&idfilm=$1 [L]
+RewriteRule ^cinema/reservation.html$ index.php?c=Controle&m=reserver [L]
+RewriteRule ^cinema/listepersonne-([0-9]+).html$ index.php?c=Controle&m=getListePersonneReservation&idprogramme=$1 [L]
+
+
+RewriteRule ^admin/pageconnexion.html$ index.php?c=Controle&m=loginbo [L]
+RewriteRule ^admin/accueil.html$ index.php?c=Controle&m=indexbo [L]
+RewriteRule ^admin/connexion.html$ index.php?c=Controle&m=connectionadmin [L]
+RewriteRule ^admin/ajoutfilm.html$ index.php?c=Controle&m=addMoovie [L]
+RewriteRule ^admin/gestionfilm.html$ index.php?c=Controle&m=gestionfilm [L]
+RewriteRule ^admin/ajouterfilm.html$ index.php?c=Controle&m=ajouterFilm [L]
+RewriteRule ^admin/pageajoutimage-([0-9]+).html$ index.php?c=Controle&m=pageAjoutImage&idfilm=$1 [L]
+RewriteRule ^admin/upload-([0-9]+).html$ index.php?c=Controle&m=upload2:idfilm=$1 [L]
