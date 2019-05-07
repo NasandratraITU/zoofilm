@@ -1,14 +1,13 @@
-<hr>
+<br>
 <div class="row">
 		<div class="container">
-					<h1 class="text-center" style="color:Blue"><?php echo($titre);?></h1>
-					<p>Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem Lorem </p>
+          <h1 class="text-center" style="color:black"><?php echo($titre);?></h1>
+					<p class="text-center"><em>"<?php echo $citation ;?>"</em></p>
 					
 		</div>
 	</div>
     <div class="site-section site-section-sm bg-light">
       <div class="container">
-      
         <div class="row mb-5">
           <!-- <div class="col-md-6 col-lg-4 mb-4">
             <div class="property-entry h-100">
@@ -46,8 +45,7 @@
         { ?>
             <div class="col-md-6 col-lg-4 mb-4">
             <div class="property-entry h-100">
-              <a href="property-details.html" class="property-thumbnail">
-               
+            <a href="<?php echo base_url('cinema/numerofilm-'.$film['IDFILM'].'.html');?>">
                 <img width="800px" height="1000px" src="<?php echo base_url();?>assets/images/<?php echo($film['IMAGEFILM']);?>" alt="image_<?php echo($film['TITREFILM']);?>" class="img-fluid">
               </a>
               <div class="p-4 property-body">

@@ -19,10 +19,10 @@
       <div class="col-md-6 col-lg-4 mb-5 mb-lg-5">
       <div class="team-member">
 
-        <img src="<?php echo base_url();?>assets/images/<?php echo ($genre['IMAGEPRINCIPALE']);?>" alt="image_genre_<?php echo($genre['GENRE']);?>" class="img-fluid rounded mb-4">
+      <a href="<?php echo base_url('cinema/genre-'.$genre['IDGENRE'].'.html');?>"><img src="<?php echo base_url();?>assets/images/<?php echo ($genre['IMAGEPRINCIPALE']);?>" alt="image_genre_<?php echo($genre['GENRE']);?>" class="img-fluid rounded mb-4"></a>
 
         <div class="text">
-          <h2 class="mb-2 font-weight-light text-black h4"><?php echo($genre['GENRE']);?></h2>
+        <a href="<?php echo base_url('cinema/genre-'.$genre['IDGENRE'].'.html');?>"><h2 class="mb-2 font-weight-light text-black h4"><?php echo($genre['GENRE']);?></h2></a>
           <!-- <span class="d-block mb-3 text-white-opacity-05">Real Estate Agent</span> -->
           <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, cumque vitae voluptates culpa earum similique corrupti itaque veniam doloribus amet perspiciatis recusandae sequi nihil tenetur ad, modi quos id magni!</p> -->
           <p><?php echo($genre['DESCRIPTIONGENRE']);?></p>

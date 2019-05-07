@@ -9,10 +9,11 @@ class Controle extends CI_Controller {
 
 	public function index()
 	{
+		$banniere = "LE CINEMA REEL";
         $page = "accueil";
-        $titre = "Reservation film cinema";
+        $titre = "Le cinema réel";
         $listGenre = $this->mabase->getGenre();
-		$rep = array('page'=>$page,'listGenre'=>$listGenre,'titre'=>$titre);
+		$rep = array('page'=>$page,'listGenre'=>$listGenre,'titre'=>$titre,'banniere'=>$banniere);
         $this->load->view('index',$rep);
     }
 
@@ -23,8 +24,10 @@ class Controle extends CI_Controller {
         $listGenre = $this->mabase->getGenre();
         $listFilm = $this->mabase->getListFilmByGenre($idgenre);
         $genre = $this->mabase->getNomGenre($idgenre);
-        $titre = "Decouvrez nos films genre ".$genre[0]['genre'];
-		$rep = array('page'=>$page,'listFilm'=>$listFilm,'listGenre'=>$listGenre,'titre'=>$titre);
+		$titre = "FILM GENRE ".$genre[0]['genre'];
+		$banniere = "FILM GENRE ".$genre[0]['genre'];
+		$citation = $genre[0]['INFOTEXTE'];
+		$rep = array('page'=>$page,'listFilm'=>$listFilm,'listGenre'=>$listGenre,'titre'=>$titre,'genre'=>$genre,'banniere'=>$banniere,'citation'=>$citation);
         $this->load->view('index',$rep);
     }
 
@@ -38,8 +41,9 @@ class Controle extends CI_Controller {
         $resteplace = $nbplacereste[0]['reste'];
         $listGenre = $this->mabase->getGenre();
         $film = $this->mabase->getInfoFilm($idfilm);
-        $titre = "Reserver le film ".$film[0]['TITREFILM']." maintenant";
-		$rep = array('page'=>$page,'film'=>$film,'listGenre'=>$listGenre,'infoprogramme'=>$infoprogramme,'resteplace'=>$resteplace,'titre'=>$titre);
+		$titre = "Reserver le film ".$film[0]['TITREFILM']." maintenant";
+		$banniere = "RESERVATION FILM";
+		$rep = array('page'=>$page,'film'=>$film,'listGenre'=>$listGenre,'infoprogramme'=>$infoprogramme,'resteplace'=>$resteplace,'titre'=>$titre,'banniere'=>$banniere);
         $this->load->view('index',$rep);
     }
 
@@ -71,8 +75,10 @@ class Controle extends CI_Controller {
     //FONCTION BACK OFFICE
     public function indexbo()
 	{
-        if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
-		$this->load->view('boindex');
+		$titre = "Accueil";
+		if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
+		$rep = array('titre'=>$titre);
+		$this->load->view('boindex',$rep);
     }
     
     public function loginbo()
@@ -82,6 +88,7 @@ class Controle extends CI_Controller {
 
 	public function addMoovie()
 	{
+		$titre = "Ajout Film";
         if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
 		$page="boajoutFilm";
 		$idmax = $this->mabase->getIdMaxFilm();
@@ -89,16 +96,17 @@ class Controle extends CI_Controller {
 		$listsalle = $this->mabase->getSalle();
 		$idsuivant = 1 + $idmax[0]['idmax'];
 		// $listMetier = $this->mabase->getListMetier();
-		$rep = array('page'=>$page,'idsuivant'=>$idsuivant,'listgenre' => $listgenre,'listsalle'=>$listsalle);
+		$rep = array('page'=>$page,'idsuivant'=>$idsuivant,'listgenre' => $listgenre,'listsalle'=>$listsalle,'titre'=>$titre);
 		$this->load->view('boindex',$rep);
 	}
 
 	public function manageMoovie()
 	{
+		$titre = "Gestion des films";
         if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
 		$page="bometier";
 		$listMetier = $this->mabase->getListMetier();
-		$rep = array('page'=>$page,'listMetier'=>$listMetier);
+		$rep = array('page'=>$page,'listMetier'=>$listMetier,'titre'=>$titre);
 		$this->load->view('boindex',$rep);
 	}
 
@@ -155,10 +163,19 @@ class Controle extends CI_Controller {
 		$this->load->view('boindex',$rep);
 	}
 
+	public function pageAjoutImage2()
+	{
+        if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
+		$page="bopageAjoutImage2";
+		// $listMetier = $this->mabase->getListMetier();
+		$rep = array('page'=>$page);
+		$this->load->view('boindex',$rep);
+	}
+
 	public function test()
 	{
 		if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
-		$config['upload_path']='./uploads';
+		$config['upload_path']='./assets/images';
 		$config['allowed_types']='jpg|png|jpeg';
 		$config['max_width']='5000';
 		$config['max_height']='5000';
@@ -177,11 +194,10 @@ class Controle extends CI_Controller {
 		$nomfichier=$this->upload->data('file_name');
 	}
 
-	public function upload1($idmax)
+	public function upload1()
 	{
         if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
-        
-		$config['upload_path']='./uploads';
+		$config['upload_path']='./assets/images';
 		$config['allowed_types']='jpg|png|jpeg';
 		$config['max_width']='5000';
 		$config['max_height']='5000';
@@ -189,41 +205,39 @@ class Controle extends CI_Controller {
 		
 		if(!$this->upload->do_upload('image1'))
 		{
-			echo('erreur');
 			$error = array('error'=>$this->upload->display_errors());
-			var_dump($error);
 		}
 		else{
-			echo('succes');
 			$data=array('upload_data'=>$this->upload->data());
 		}
 		$nomfichier=$this->upload->data('file_name');
-		$this->mabase->updateImage($idmax,$nomfichier);
+		$idmax = $this->mabase->getIdMaxFilm();
+		$this->mabase->updateImage($idmax[0]['idmax'],$nomfichier);
+		header('Location:'.base_url('admin/pageajoutimage2.html'));
+		// header('Location:admin/pageajoutimage2.html');
     }
     
-    public function upload2($idmax)
+    public function upload2()
 	{
-        // if($this->session->userdata('pseudo')==null)  redirect('Controle/loginbo');
-        // $idmax = $this->input->post('idmax');
-		$config['upload_path']='./uploads';
+        if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
+		$config['upload_path']='./assets/images';
 		$config['allowed_types']='jpg|png|jpeg';
 		$config['max_width']='5000';
 		$config['max_height']='5000';
 		$this->load->library('upload',$config);
 		
-		if(!$this->upload->do_upload('image1'))
+		if(!$this->upload->do_upload('image2'))
 		{
-			echo('erreur');
 			$error = array('error'=>$this->upload->display_errors());
-			var_dump($error);
 		}
 		else{
-			echo('succes');
 			$data=array('upload_data'=>$this->upload->data());
 		}
 		$nomfichier=$this->upload->data('file_name');
-		$this->mabase->updateImage($idmax,$nomfichier);
-	}
+		$idmax = $this->mabase->getIdMaxFilm();
+		$this->mabase->updateImage2($idmax[0]['idmax'],$nomfichier);
+		header('Location:'.base_url('admin/ajoutfilm.html'));
+    }
 
 	public function gestionfilm()
 	{

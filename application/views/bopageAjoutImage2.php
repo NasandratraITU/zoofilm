@@ -9,11 +9,11 @@
 
 									
 
-									<form class="form-horizontal row-fluid" action="<?php echo base_url('admin/upload.html');?>" enctype="multipart/form-data" method="post">
+									<form class="form-horizontal row-fluid" action="<?php echo base_url('admin/upload2.html');?>" enctype="multipart/form-data" method="post">
 										<div class="control-group">
 											<label class="control-label" for="basicinput">Choisir votre image</label>
 											<div class="controls">
-												<input type="file" id="basicinput" name="image1" class="span8">
+												<input type="file" id="basicinput" name="image2" class="span8">
 											</div>
 										</div>
 

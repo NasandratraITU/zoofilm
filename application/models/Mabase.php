@@ -80,7 +80,7 @@
             
             public function getNomGenre($idgenre)
             {
-                $sql= "select genre from genrefilm where idgenre=".$idgenre."";
+				$sql= "select genre,INFOTEXTE from genrefilm where idgenre=".$idgenre."";
                 $result = $this->db->query($sql);
 				$retour = $result->result_array();
 				$this->db->close();
@@ -165,6 +165,13 @@
 			public function updateImage($idfilm,$nomimage)
 			{
 				$sql = "update film set IMAGEFILM='".$nomimage."' where IDFILM=".$idfilm."";
+				$result = $this->db->query($sql);
+				$this->db->close();
+			}
+
+			public function updateImage2($idfilm,$nomimage)
+			{
+				$sql = "update film set IMAGEFILM2='".$nomimage."' where IDFILM=".$idfilm."";
 				$result = $this->db->query($sql);
 				$this->db->close();
 			}

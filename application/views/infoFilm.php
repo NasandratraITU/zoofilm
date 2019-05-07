@@ -1,10 +1,31 @@
-<hr>
+<br>
 <div class="container">
+<div class="col-md-12">
+          <div class="site-section-title text-center">
+            <br>
+            <h2>Decouvrer le film <?php echo $film[0]['TITREFILM'];?>  maintenant</h2>
+            <br><br>
+            <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero magnam officiis ipsa eum pariatur labore fugit amet eaque iure vitae, repellendus laborum in modi reiciendis quis! Optio minima quibusdam, laboriosam.</p> -->
+            <!-- <p>"Vous aimez plutôt le romantisme ou l'action ? La comédie ou le drame ? Tous se trouvent chez nous, n'hesitez pas à reserver vos places et rendez vous dans nos salles de projections !"</p> -->
+          </div>
+        </div>
         <div class="row">
+          
+
+        
+      
+
+
+
+
+
+
+
+
           <div class="col-lg-8">
             <div>
               <div class="slide-one-item home-slider owl-carousel">
-                <div><img src="<?php echo base_url();?>assets/images/<?php echo $film[0]['IMAGEFILM2'];?>" alt="Image" class="img-fluid"></div>
+                <div><img src="<?php echo base_url();?>assets/images/<?php echo $film[0]['IMAGEFILM2'];?>" alt="Image_<?php echo($film[0]['TITREFILM']);?>" class="img-fluid"></div>
                 <!-- <div><img src="images/hero_bg_2.jpg" alt="Image" class="img-fluid"></div>
                 <div><img src="images/hero_bg_3.jpg" alt="Image" class="img-fluid"></div> -->
               </div>
@@ -13,7 +34,7 @@
             <div class="bg-white property-body border-bottom border-left border-right">
               <div class="row mb-5">
                 <div class="col-md-6">
-                  <h1 style="color:green"><?php echo $film[0]['TITREFILM'];?></h1>
+                  <h1 style="color:black"><?php echo $film[0]['TITREFILM'];?></h1>
                 </div>
                 <!-- <div class="col-md-6">
                   <ul class="property-specs-wrap mb-3 mb-lg-0  float-lg-right">
