@@ -38,7 +38,7 @@ class Controle extends CI_Controller {
         $resteplace = $nbplacereste[0]['reste'];
         $listGenre = $this->mabase->getGenre();
         $film = $this->mabase->getInfoFilm($idfilm);
-        $titre = "Reserver le film ".$film[0]['titrefilm']." maintenant";
+        $titre = "Reserver le film ".$film[0]['TITREFILM']." maintenant";
 		$rep = array('page'=>$page,'film'=>$film,'listGenre'=>$listGenre,'infoprogramme'=>$infoprogramme,'resteplace'=>$resteplace,'titre'=>$titre);
         $this->load->view('index',$rep);
     }
