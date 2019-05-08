@@ -3,7 +3,7 @@
 
 						<div class="module">
 							<div class="module-head">
-								<h3>Forms</h3>
+								<h3>Ajouter une image secondaire</h3>
 							</div>
 							<div class="module-body">
 

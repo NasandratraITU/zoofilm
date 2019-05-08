@@ -11,15 +11,17 @@ class Controle extends CI_Controller {
 	{
 		$banniere = "LE CINEMA REEL";
         $page = "accueil";
-        $titre = "Le cinema réel";
+		$titre = "Le cinema réel";
+		$description = "Decouvrez de nouvelles perspectives, reservez votre film preferé chez Zooland, profiter du cinema nouvelle generation";
         $listGenre = $this->mabase->getGenre();
-		$rep = array('page'=>$page,'listGenre'=>$listGenre,'titre'=>$titre,'banniere'=>$banniere);
+		$rep = array('page'=>$page,'listGenre'=>$listGenre,'titre'=>$titre,'banniere'=>$banniere,'description'=>$description);
         $this->load->view('index',$rep);
     }
 
     public function getListFilmBygenre()
     {
-        $idgenre = $this->input->get('idcategorie');
+		$idgenre = $this->input->get('idcategorie');
+		$description = "Profitez de tous les genres de films chez Zoofilm, comédie ou romantique ou action";
         $page = "filmByGenre";
         $listGenre = $this->mabase->getGenre();
         $listFilm = $this->mabase->getListFilmByGenre($idgenre);
@@ -27,13 +29,14 @@ class Controle extends CI_Controller {
 		$titre = "FILM GENRE ".$genre[0]['genre'];
 		$banniere = "FILM GENRE ".$genre[0]['genre'];
 		$citation = $genre[0]['INFOTEXTE'];
-		$rep = array('page'=>$page,'listFilm'=>$listFilm,'listGenre'=>$listGenre,'titre'=>$titre,'genre'=>$genre,'banniere'=>$banniere,'citation'=>$citation);
+		$rep = array('page'=>$page,'listFilm'=>$listFilm,'listGenre'=>$listGenre,'titre'=>$titre,'genre'=>$genre,'banniere'=>$banniere,'citation'=>$citation,'description'=>$description);
         $this->load->view('index',$rep);
     }
 
     public function getInfoFilm()
     {
-        $idfilm = $this->input->get('idfilm');
+		$idfilm = $this->input->get('idfilm');
+		$description = "Vous avez choisi ce film, il est tant de le regarder.Reservation rapide et efficace";
         $page = "infoFilm";
         $infoprogramme = $this->mabase->getProgrammeByIdFilm($idfilm);
         // $idreservation = $this->mabase->getIdReservation($infoprogramme[0]['IDPROGRAMME']);
@@ -43,7 +46,7 @@ class Controle extends CI_Controller {
         $film = $this->mabase->getInfoFilm($idfilm);
 		$titre = "Reserver le film ".$film[0]['TITREFILM']." maintenant";
 		$banniere = "RESERVATION FILM";
-		$rep = array('page'=>$page,'film'=>$film,'listGenre'=>$listGenre,'infoprogramme'=>$infoprogramme,'resteplace'=>$resteplace,'titre'=>$titre,'banniere'=>$banniere);
+		$rep = array('page'=>$page,'film'=>$film,'listGenre'=>$listGenre,'infoprogramme'=>$infoprogramme,'resteplace'=>$resteplace,'titre'=>$titre,'banniere'=>$banniere,'description'=>$description);
         $this->load->view('index',$rep);
     }
 
@@ -115,7 +118,6 @@ class Controle extends CI_Controller {
 
 	public function ajouterFilm()
 	{
-        
         if($this->session->userdata('pseudo')==null)   header('Location:'.base_url('admin/pageconnexion-0.html'));
 		$titre=$this->input->post('titre');
 		$idgenre=$this->input->post('idgenre');
@@ -159,19 +161,21 @@ class Controle extends CI_Controller {
 	public function pageAjoutImage()
 	{
         if($this->session->userdata('pseudo')==null)   header('Location:'.base_url('admin/pageconnexion-0.html'));
-        $idfilm = $this->input->get('idfilm');
+		$idfilm = $this->input->get('idfilm');
+		$titre="Ajout image principale";
 		$page="bopageAjoutImage";
 		// $listMetier = $this->mabase->getListMetier();
-		$rep = array('page'=>$page,'idfilm'=>$idfilm);
+		$rep = array('page'=>$page,'idfilm'=>$idfilm,'titre'=>$title);
 		$this->load->view('boindex',$rep);
 	}
 
 	public function pageAjoutImage2()
 	{
-        if($this->session->userdata('pseudo')==null)   header('Location:'.base_url('admin/pageconnexion-0.html'));
+		if($this->session->userdata('pseudo')==null)   header('Location:'.base_url('admin/pageconnexion-0.html'));
+		$titre="Ajout image secondaire";
 		$page="bopageAjoutImage2";
 		// $listMetier = $this->mabase->getListMetier();
-		$rep = array('page'=>$page);
+		$rep = array('page'=>$page,'titre'=>$titre);
 		$this->load->view('boindex',$rep);
 	}
 

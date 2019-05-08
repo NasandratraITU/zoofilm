@@ -4,6 +4,7 @@
     <title>Zoolfilm &mdash; <?php echo($titre);?></title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="<?php echo $description ;?>">
 
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Roboto+Mono:300,400,500">  -->
     <link rel="stylesheet" href="<?php echo base_url();?>fonts/icomoon/style.css">
@@ -232,10 +233,10 @@
           <div class="col-lg-4 mb-5 mb-lg-0">
             <h3 class="footer-heading mb-4">Nous suivre</h3>
                 <div>
-                  <a href="#" class="pl-0 pr-3"><span class="icon-facebook">F</span></a>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-twitter">T</span></a>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-instagram">I</span></a>
-                  <a href="#" class="pl-3 pr-3"><span class="icon-linkedin">L</span></a>
+                  <a href="#" class="pl-0 pr-3"><img class="bg-facebook" alt="icone_twitter"/></a>
+                  <a href="#" class="pl-3 pr-3"><img class="bg-twitter" alt="icone_facebook"/></a>
+                  <!-- <a href="#" class="pl-3 pr-3"><span class="icon-instagram">I</span></a>
+                  <a href="#" class="pl-3 pr-3"><span class="icon-linkedin">L</span></a> -->
                 </div>
           </div>
           
@@ -249,7 +250,7 @@
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
             <p>Copright@2019 By RAKOTONANAHARY Rakotomamonjy Nasandratra ; Promo 10A ; numéro 25</p>
-            <p><a href="<?php echo base_url('admin/pageconnexion.html');?>">BO</a></p>
+            <p><a href="<?php echo base_url('admin/pageconnexion-0.html');?>">BO</a></p>
           </div>
           
         </div>

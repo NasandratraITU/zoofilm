@@ -22,6 +22,15 @@ a {
   a:hover {
     text-decoration: none; }
 
+.bg-facebook {
+      width: 30px; height: 30px;
+      background: url('../images/css_sprites.png') -10px -10px;
+  }
+  .bg-twitter {
+    width: 30px; height: 30px;
+    background: url('../images/css_sprites.png') -60px -60px;
+}
+  
 .text-black {
   color: #000 !important; }
 
