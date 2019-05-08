@@ -216,10 +216,10 @@
                 <ul class="list-unstyled">
                   <li><a href="<?php echo base_url('cinema/accueil.html');?>">ACCUEIL</a></li>
 
-<?php foreach($listGenre as $genre)
-{ ;?>
-    <li><a href="<?php echo base_url('cinema/genre-'.$genre['IDGENRE'].'.html');?>"><?php echo $genre['GENRE'];?> </a></li>
-<?php } ;?>
+          <?php foreach($listGenre as $genre)
+          { ;?>
+              <li><a href="<?php echo base_url('cinema/genre-'.$genre['IDGENRE'].'.html');?>"><?php echo $genre['GENRE'];?> </a></li>
+          <?php } ;?>
                   
 
 
@@ -250,7 +250,7 @@
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
             </p>
             <p>Copright@2019 By RAKOTONANAHARY Rakotomamonjy Nasandratra ; Promo 10A ; numéro 25</p>
-            <p><a href="<?php echo base_url('admin/pageconnexion-0.html');?>">BO</a></p>
+            <!-- <p><a href="<?php echo base_url('admin/pageconnexion-0.html');?>">BO</a></p> -->
           </div>
           
         </div>

@@ -178,7 +178,7 @@
 			
 			public function getListeFilm()
 			{
-				$sql = "select IDFILM,TITREFILM,GENRE,ACTEUR,DUREE from FILM f join genrefilm g on f.IDGENRE=g.IDGENRE";
+				$sql = "select IDFILM,TITREFILM,GENRE,ACTEUR,DUREE from film f join genrefilm g on f.IDGENRE=g.IDGENRE";
 				$result = $this->db->query($sql);
 				$retour = $result->result_array();
 				$this->db->close();
@@ -187,7 +187,7 @@
 
 			public function getFilmById($idfilm)
 			{
-				$sql = "select IDFILM,TITREFILM,GENRE,ACTEUR,DUREE,DATESORTIE,DESCRIPTIONFILM from FILM f join genrefilm g on f.IDGENRE=g.IDGENRE where f.IDFILM=".$idfilm."";
+				$sql = "select IDFILM,TITREFILM,GENRE,ACTEUR,DUREE,DATESORTIE,DESCRIPTIONFILM from film f join genrefilm g on f.IDGENRE=g.IDGENRE where f.IDFILM=".$idfilm."";
 				$result = $this->db->query($sql);
 				$retour = $result->result_array();
 				$this->db->close();

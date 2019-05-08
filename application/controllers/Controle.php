@@ -165,7 +165,7 @@ class Controle extends CI_Controller {
 		$titre="Ajout image principale";
 		$page="bopageAjoutImage";
 		// $listMetier = $this->mabase->getListMetier();
-		$rep = array('page'=>$page,'idfilm'=>$idfilm,'titre'=>$title);
+		$rep = array('page'=>$page,'idfilm'=>$idfilm,'titre'=>$titre);
 		$this->load->view('boindex',$rep);
 	}
 
