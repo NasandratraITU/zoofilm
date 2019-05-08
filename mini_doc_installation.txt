@@ -1,4 +1,5 @@
-- extraire le fichier .zip dans le dossier www de votre serveur uwamp
-- copier/coller le script contenu dans base_zoofilm.sql dans mysql
+- dezipper puis coller le projet dans le repertoire www de votre Uwamp 
+- copier/coller le script contenu dans le fichier "base_zoofilm.sql" dans votre base de donnee mysql
 - ouvrir le projet dans uwamp
+Pour acceder au back-office, 
 BONNE NAVIGATION !
