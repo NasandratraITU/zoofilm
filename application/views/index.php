@@ -16,16 +16,16 @@
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/owl.theme.default.min.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/bootstrap-datepicker.css">
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/mediaelementplayer.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/animate.css">
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/animate.css"> -->
     <link rel="stylesheet" href="<?php echo base_url();?>assets/fonts/flaticon/font/flaticon.css">
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/fl-bigmug-line.css"> -->
+    <!-- <link rel="stylesheet" href="<?php echo base_url();?>assets/css/fl-bigmug-line.css"> -->
+
     <link rel="stylesheet" href="<?php echo base_url();?>assets/css/stylecss.min.css">
    
-    
-  
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/aos.css">
 
-    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
+    <!-- <link rel="stylesheet" href="<?php echo base_url();?>assets/css/aos.css">
+
+    <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css"> -->
     
   </head>
   <body>
