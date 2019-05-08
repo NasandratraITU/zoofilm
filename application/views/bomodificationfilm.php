@@ -7,9 +7,20 @@
 							</div>
 							<div class="module-body">
 			
-									<form class="form-horizontal row-fluid" action="<?php echo site_url('Controle/updateFilm/'.$film[0]['IDFILM']);?>">
+									<form method="post" class="form-horizontal row-fluid" action="<?php echo base_url('admin/modifierfilm.html');?>">
 
-                                       
+                                       <input type="hidden" value="<?php echo $film[0]['IDFILM'] ;?>" name="idfilm">
+									   <?php if(isset($para) && $para==1)
+										{ ;?>
+											<strong style="color:green">Film modifié avec succes</strong>
+											<!-- <div class="control-group">
+												<label class="control-label" for="basicinput">Titre</label>
+												<div class="controls">
+													<input type="text" id="basicinput" value="<?php echo($film[0]['TITREFILM']);?>" name="titre" class="span8">
+												</div>
+                                        	</div> -->
+
+										<?php };?>
 
 										<div class="control-group">
 											<label class="control-label" for="basicinput">Titre</label>
@@ -50,7 +61,7 @@
 											</div>
                                         </div>
                                         
-                                        
+									
 										<div class="control-group">
 											<div class="controls">
 												<button type="submit" class="btn btn-success">Modifier ce film</button>

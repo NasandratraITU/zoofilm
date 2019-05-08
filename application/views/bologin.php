@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Edmin</title>
+	<title>Adm-Zoofilm - Connexion</title>
 	<link type="text/css" href="<?php echo base_url();?>/assets2/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<link type="text/css" href="<?php echo base_url();?>/assets2/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
 	<link type="text/css" href="<?php echo base_url();?>/assets2/css/theme.css" rel="stylesheet">
@@ -20,14 +20,14 @@
 				</a>
 
 			  	<a class="brand" href="index.html">
-			  		Edmin
+			  		Adm-Zoofilm
 			  	</a>
 
 				<div class="nav-collapse collapse navbar-inverse-collapse">
 				
 					<ul class="nav pull-right">
 
-						<li><a href="#">
+						<!-- <li><a href="#">
 							Sign Up
 						</a></li>
 
@@ -35,7 +35,7 @@
 
 						<li><a href="#">
 							Forgot your password?
-						</a></li>
+						</a></li> -->
 					</ul>
 				</div><!-- /.nav-collapse -->
 			</div>
@@ -64,6 +64,10 @@
 								</div>
 							</div>
 						</div>
+						<?php if(isset($mot) && $mot==1) 
+						{ ;?>
+							<strong style="color:red">Mot de passe incorrect</strong>
+						<?php } ; ?>
 						<div class="module-foot">
 							<div class="control-group">
 								<div class="controls clearfix">
@@ -74,6 +78,7 @@
 								</div>
 							</div>
 						</div>
+						
 					</form>
 				</div>
 			</div>
@@ -84,7 +89,7 @@
 		<div class="container">
 			 
 
-			<b class="copyright">&copy; 2014 Edmin - EGrappler.com </b> All rights reserved.
+			<b class="copyright">&copy; 2019 Adm-Zoofilm - Zoofilm.com </b> By Rakotonanahary Nasandratra ; P10A ; Numero 25
 		</div>
 	</div>
 	<script src="<?php echo base_url();?>/assets2/scripts/jquery-1.9.1.min.js" type="text/javascript"></script>

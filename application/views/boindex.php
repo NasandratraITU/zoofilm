@@ -17,21 +17,21 @@
             <div class="navbar-inner">
                 <div class="container">
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-inverse-collapse">
-                        <i class="icon-reorder shaded"></i></a><a class="brand" href="index.html">Edmin </a>
+                        <i class="icon-reorder shaded"></i></a><a class="brand" href="index.html">Adm-Zoofilm </a>
                     <div class="nav-collapse collapse navbar-inverse-collapse">
-                        <ul class="nav nav-icons">
+                        <!-- <ul class="nav nav-icons">
                             <li class="active"><a href="#"><i class="icon-envelope"></i></a></li>
                             <li><a href="#"><i class="icon-eye-open"></i></a></li>
                             <li><a href="#"><i class="icon-bar-chart"></i></a></li>
-                        </ul>
-                        <form class="navbar-search pull-left input-append" action="#">
+                        </ul> -->
+                        <!-- <form class="navbar-search pull-left input-append" action="#">
                         <input type="text" class="span3">
                         <button class="btn" type="button">
                             <i class="icon-search"></i>
                         </button>
-                        </form>
+                        </form> -->
                         <ul class="nav pull-right">
-                            <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
+                            <!-- <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown
                                 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Item No. 1</a></li>
@@ -40,9 +40,9 @@
                                     <li class="nav-header">Example Header</li>
                                     <li><a href="#">A Separated link</a></li>
                                 </ul>
-                            </li>
-                            <li><a href="<?php site_url('Controle/deconnection');?>">Support </a></li>
-                            <li class="nav-user dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            </li> -->
+                            <li><a href="<?php echo base_url('admin/deconnection.html');?>">Deconnexion </a></li>
+                            <!-- <li class="nav-user dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <img src="<?php echo base_url();?>/assets/images/user.png" class="nav-avatar" />
                                 <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
@@ -52,7 +52,7 @@
                                     <li class="divider"></li>
                                     <li><a href="<?php echo site_url('Controle/deconnection');?>">Deconnexion</a></li>
                                 </ul>
-                            </li>
+                            </li> -->
                         </ul>
                     </div>
                     <!-- /.nav-collapse -->
@@ -67,7 +67,7 @@
                     <div class="span3">
                         <div class="sidebar">
                             <ul class="widget widget-menu unstyled">
-                                <li class="active"><a href="<?php echo site_url('Controle/index');?>"><i class="menu-icon icon-dashboard"></i>Accueil
+                                <!-- <li class="active"><a href="<?php echo site_url('Controle/index');?>"><i class="menu-icon icon-dashboard"></i>Accueil -->
                                 </a></li>
                                 
                                 <li><a href="<?php echo base_url('admin/ajoutfilm.html');?>"><i class="menu-icon icon-book"></i>Ajouter un film</a>
@@ -98,7 +98,7 @@
         <!--/.wrapper-->
         <div class="footer">
             <div class="container">
-                <b class="copyright">&copy; 2014 Edmin - EGrappler.com </b>All rights reserved.
+            <b class="copyright">&copy; 2019 Adm-Zoofilm - Zoofilm.com </b> By Rakotonanahary Nasandratra ; P10A ; Numero 25
             </div>
         </div>
         <script src="<?php echo base_url();?>/assets2/scripts/jquery-1.9.1.min.js" type="text/javascript"></script>

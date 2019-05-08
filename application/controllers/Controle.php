@@ -76,20 +76,23 @@ class Controle extends CI_Controller {
     public function indexbo()
 	{
 		$titre = "Accueil";
-		if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
+		if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion-0.html'));
 		$rep = array('titre'=>$titre);
 		$this->load->view('boindex',$rep);
     }
     
     public function loginbo()
     {
-        $this->load->view('bologin');
+		$mot = $this->input->get('mot');
+		$rep = array('mot'=>$mot);
+		$this->load->view('bologin',$rep);
+		
     }
 
 	public function addMoovie()
 	{
 		$titre = "Ajout Film";
-        if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
+        if($this->session->userdata('pseudo')==null)   header('Location:'.base_url('admin/pageconnexion-0.html'));
 		$page="boajoutFilm";
 		$idmax = $this->mabase->getIdMaxFilm();
 		$listgenre = $this->mabase->getGenreFilm();
@@ -103,7 +106,7 @@ class Controle extends CI_Controller {
 	public function manageMoovie()
 	{
 		$titre = "Gestion des films";
-        if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
+        if($this->session->userdata('pseudo')==null)   header('Location:'.base_url('admin/pageconnexion-0.html'));
 		$page="bometier";
 		$listMetier = $this->mabase->getListMetier();
 		$rep = array('page'=>$page,'listMetier'=>$listMetier,'titre'=>$titre);
@@ -113,7 +116,7 @@ class Controle extends CI_Controller {
 	public function ajouterFilm()
 	{
         
-        if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
+        if($this->session->userdata('pseudo')==null)   header('Location:'.base_url('admin/pageconnexion-0.html'));
 		$titre=$this->input->post('titre');
 		$idgenre=$this->input->post('idgenre');
 		$acteur=$this->input->post('acteur');
@@ -155,7 +158,7 @@ class Controle extends CI_Controller {
 
 	public function pageAjoutImage()
 	{
-        if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
+        if($this->session->userdata('pseudo')==null)   header('Location:'.base_url('admin/pageconnexion-0.html'));
         $idfilm = $this->input->get('idfilm');
 		$page="bopageAjoutImage";
 		// $listMetier = $this->mabase->getListMetier();
@@ -165,7 +168,7 @@ class Controle extends CI_Controller {
 
 	public function pageAjoutImage2()
 	{
-        if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
+        if($this->session->userdata('pseudo')==null)   header('Location:'.base_url('admin/pageconnexion-0.html'));
 		$page="bopageAjoutImage2";
 		// $listMetier = $this->mabase->getListMetier();
 		$rep = array('page'=>$page);
@@ -174,7 +177,7 @@ class Controle extends CI_Controller {
 
 	public function test()
 	{
-		if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
+		if($this->session->userdata('pseudo')==null)   header('Location:'.base_url('admin/pageconnexion-0.html'));
 		$config['upload_path']='./assets/images';
 		$config['allowed_types']='jpg|png|jpeg';
 		$config['max_width']='5000';
@@ -196,7 +199,7 @@ class Controle extends CI_Controller {
 
 	public function upload1()
 	{
-        if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
+        if($this->session->userdata('pseudo')==null)   header('Location:'.base_url('admin/pageconnexion-0.html'));
 		$config['upload_path']='./assets/images';
 		$config['allowed_types']='jpg|png|jpeg';
 		$config['max_width']='5000';
@@ -219,7 +222,7 @@ class Controle extends CI_Controller {
     
     public function upload2()
 	{
-        if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
+        if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion-0.html'));
 		$config['upload_path']='./assets/images';
 		$config['allowed_types']='jpg|png|jpeg';
 		$config['max_width']='5000';
@@ -241,32 +244,38 @@ class Controle extends CI_Controller {
 
 	public function gestionfilm()
 	{
-        if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
+		if($this->session->userdata('pseudo')==null)   header('Location:'.base_url('admin/pageconnexion-0.html'));
+		$titre = "Gestion des films";
 		$page = "bogestionfilm";
 		$listfilm = $this->mabase->getListeFilm();
-		$rep = array('page'=>$page,'listfilm'=>$listfilm);
+		$rep = array('page'=>$page,'listfilm'=>$listfilm,'titre'=>$titre);
 		$this->load->view('boindex',$rep);	
 	}
 
-	public function modifierfilm($idfilm)
+	public function modifierfilm()
 	{
-        if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
+		if($this->session->userdata('pseudo')==null)   header('Location:'.base_url('admin/pageconnexion-0.html'));
+		$titre = "Modifier votre film";
+		$idfilm = $this->input->get('idfilm');
+		$para = $this->input->get('para');
 		$page = "bomodificationfilm";
 		$film = $this->mabase->getFilmById($idfilm);
-		$rep = array('page'=>$page,'film'=>$film);
+		$rep = array('page'=>$page,'film'=>$film,'titre'=>$titre,'para'=>$para);
 		$this->load->view('boindex',$rep);
 	}
 
-	public function updateFilm($idfilm)
+	public function updateFilm()
 	{
-        if($this->session->userdata('pseudo')==null)  header('Location:'.base_url('admin/pageconnexion.html'));
-		$titre=$this->input->get('titre');
-		$acteur=$this->input->get('acteur');
-		$duree=$this->input->get('duree');
-		$sortie=$this->input->get('sortie');
-		$description=$this->input->get('description');
+		if($this->session->userdata('pseudo')==null)   header('Location:'.base_url('admin/pageconnexion-0.html'));
+		$idfilm=$this->input->post('idfilm');
+		$titre=$this->input->post('titre');
+		$acteur=$this->input->post('acteur');
+		$duree=$this->input->post('duree');
+		$sortie=$this->input->post('sortie');
+		$description=$this->input->post('description');
 		$this->mabase->updateFilm($idfilm,$titre,$acteur,$duree,$sortie,$description);
-		redirect('Controle/modifierfilm/'.$idfilm);
+		header('Location:'.base_url('admin/modificationfilm-'.$idfilm.'-1.html'));
+		// redirect('Controle/modifierfilm/'.$idfilm);
     }
     
     public function connectionadmin()
@@ -284,7 +293,7 @@ class Controle extends CI_Controller {
         }
         else
         {
-            header('Location:'.base_url('admin/pageconnexion.html'));
+			header('Location:'.base_url('admin/pageconnexion-1.html'));
         }
     }
 
@@ -292,7 +301,7 @@ class Controle extends CI_Controller {
     {
         $this->session->unset_userdata('pseudo');
         $this->session->sess_destroy();
-        redirect('Controle/loginbo');
+		header('Location:'.base_url('admin/pageconnexion-0.html'));
     }
    
 

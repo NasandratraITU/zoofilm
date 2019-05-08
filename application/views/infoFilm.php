@@ -122,8 +122,8 @@
           </div>
           <div class="col-lg-4">
           <div class="bg-white widget border rounded">
-              <h5 class="text-black text-center"><u>ADULTE</u> : 250000 Ar</h5>
-              <h5 class="text-black text-center"><u>ENFANT</u> : 300000 Ar</h5>
+              <h5 class="text-black text-center"><u>ADULTE</u> : 20.000 Ar</h5>
+              <h5 class="text-black text-center"><u>ENFANT</u> : 15.000 Ar</h5>
             </div>
 
             <div class="bg-white widget border rounded">
@@ -161,19 +161,19 @@
 
             
 
-            <div class="bg-white widget border rounded">
+            <!-- <div class="bg-white widget border rounded">
               <h3 class="h4 text-black widget-title mb-3 text-center">CHIFFRE</h3>
               <p class="text-center">25 personnes vont voir ce film</p>
               <p class="text-center"><a href="<?php echo base_url('cinema/listepersonne-'.$infoprogramme[0]['idprogramme'].'.html');?>">Tous les consulter</a>
       
-            </div>
+            </div> -->
 
           </div>
           
         </div>
       </div>
     </div>
-
+<br>
     <!-- <div class="site-section site-section-sm bg-light">
       <div class="container">
 

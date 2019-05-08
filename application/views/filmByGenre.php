@@ -52,6 +52,7 @@
                 <!-- <a href="#" class="property-favorite active"><span class="icon-heart-o"></span></a> -->
                 <h2 class="property-title"><a href="<?php echo base_url('cinema/numerofilm-'.$film['IDFILM'].'.html');?>"><?php echo($film['TITREFILM']);?></a></h2>
 				<!-- <strong class="property-price text-primary mb-3 d-block text-danger">25 places restantes</strong> -->
+                <span class="property-icon icon-room"></span> Acteur : <?php echo($film['ACTEUR']);?><br>
                 <span class="property-icon icon-room"></span> Date : <?php echo($film['DATEFILM']);?><br>
                 <span class="property-icon icon-room"></span> A : <?php echo($film['HEUREDATE']);?> heures <br>
               </div>

@@ -23,7 +23,7 @@
                                             <td><?php echo($film['TITREFILM']);?></td>
                                             <td><?php echo($film['GENRE']);?></td>
                                             <td><?php echo($film['ACTEUR']);?></td>
-                                            <td><a href="<?php echo site_url('Controle/modifierfilm/'.$film['IDFILM']);?>"><button class="btn btn-inverse">Modifier</button></a></td>
+                                            <td><a href="<?php echo base_url('admin/modificationfilm-'.$film['IDFILM'].'-0.html');?>"><button class="btn btn-inverse">Modifier</button></a></td>
                                         </tr>
                                     <?php } ?>
 								  </tbody>
