@@ -233,8 +233,8 @@
           <div class="col-lg-4 mb-5 mb-lg-0">
             <h3 class="footer-heading mb-4">Nous suivre</h3>
                 <div>
-                  <a href="#" class="pl-0 pr-3"><img class="bg-facebook" alt="icone_twitter"/></a>
-                  <a href="#" class="pl-3 pr-3"><img class="bg-twitter" alt="icone_facebook"/></a>
+                  <a href="#" class="pl-0 pr-3"><img class="bg-facebook"/></a>
+                  <a href="#" class="pl-3 pr-3"><img class="bg-twitter"/></a>
                   <!-- <a href="#" class="pl-3 pr-3"><span class="icon-instagram">I</span></a>
                   <a href="#" class="pl-3 pr-3"><span class="icon-linkedin">L</span></a> -->
                 </div>
