@@ -1,5 +1,5 @@
 - dezipper puis coller le projet dans le repertoire www de votre Uwamp 
 - copier/coller le script contenu dans le fichier "base_zoofilm.sql" dans votre base de donnee mysql
 - ouvrir le projet dans uwamp
-Pour acceder au back-office, 
+Pour acceder au back-office, http://localhost:votre_port/zoofilm/admin/pageconnexion-0.html
 BONNE NAVIGATION !
