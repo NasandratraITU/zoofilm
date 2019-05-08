@@ -16,7 +16,7 @@
 										<div class="control-group">
 											<label class="control-label" for="basicinput">Titre</label>
 											<div class="controls">
-												<input required type="text" id="basicinput" placeholder="" name="titre" class="span8">
+												<input required type="text" id="basicinput" placeholder="" name="titre" class="span8" value="votre_titre">
 											</div>
                                         </div>
                                         
@@ -35,14 +35,14 @@
                                         <div class="control-group">
 											<label class="control-label" for="basicinput">Acteur</label>
 											<div class="controls">
-												<input type="text" id="basicinput" placeholder="" name="acteur" class="span8">
+												<input type="text" id="basicinput" placeholder="" name="acteur" class="span8" value="votre_acteur">
 											</div>
                                         </div>
 
                                         <div class="control-group">
 											<label class="control-label" for="basicinput">Durée</label>
 											<div class="controls">
-												<input type="number" id="basicinput" placeholder="" name="duree" class="span8">
+												<input type="number" id="basicinput" placeholder="" name="duree" class="span8" value="110">
 											</div>
                                         </div>
 
@@ -51,7 +51,7 @@
                                         <div class="control-group">
 											<label class="control-label" for="basicinput">Date de sortie</label>
 											<div class="controls">
-												<input type="number" id="basicinput" placeholder="" name="sortie" class="span8">
+												<input type="number" id="basicinput" placeholder="" name="sortie" class="span8" value="2019">
 											</div>
                                         </div>
 
@@ -60,14 +60,14 @@
 										<div class="control-group">
 											<label class="control-label" for="basicinput">Description</label>
 											<div class="controls">
-												<textarea name = "description" class="span8" rows="5"></textarea>
+												<textarea name = "description" class="span8" rows="5">votre_description</textarea>
 											</div>
                                         </div>
                                         
                                         <div class="control-group">
 											<label class="control-label" for="basicinput">Date de diffusion</label>
 											<div class="controls">
-												<input required type="date" id="basicinput" placeholder="" name="datediffusion" class="span8">
+												<input required type="date" id="basicinput" placeholder="" name="datediffusion" class="span8" value="2019-05-20">
 											</div>
                                         </div>
 
