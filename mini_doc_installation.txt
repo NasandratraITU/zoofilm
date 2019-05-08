@@ -1,0 +1,4 @@
+- extraire le fichier .zip dans le dossier www de votre serveur uwamp
+- copier/coller le script contenu dans base_zoofilm.sql dans mysql
+- ouvrir le projet dans uwamp
+BONNE NAVIGATION !
